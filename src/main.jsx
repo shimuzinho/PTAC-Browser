@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Home'
 import Oferta from './Oferta'
 import Produto from './Produto'
+import './globals.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
