@@ -1,17 +1,17 @@
 export default function ListarProdutos ({ lista }) {
   return (
-    <>
+    <main>
       {
         lista.map(el => 
-          <div>
-            <img src={el.imagem}></img>
-            <div>
+          <div className="container-produto">
+            <img className="imagem-produto" src={el.imagem}></img>
+            <div className="container-descricao">
               <p>{el.nome}</p>
-              <p>{el.preco}</p>
+              <p className="preco">{el.preco}</p>
             </div>
           </div>
         )
       }
-    </>
+    </main>
   )
 }
