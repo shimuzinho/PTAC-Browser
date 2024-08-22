@@ -3,11 +3,13 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import { useState } from "react"
 import ListarProdutos from "../components/ListarProdutos"
+import Footer from "../components/Footer"
 
 export default function Home () {
     
     const [camisasRockAndRoll, setCamisasRockAndRoll] = useState([
     {
+        "id": 1,
         "nome": "Camiseta Line Drum ArtRock Infantil",
         "preco": 56,
         "desconto": 0.1,
@@ -16,6 +18,7 @@ export default function Home () {
         "tecido": "algodão"
     }, 
     {
+        "id": 2,
         "nome": "Camiseta Ozzy Osbourne Chemical EXG",
         "preco": 92,
         "desconto": 0.1,
@@ -24,6 +27,7 @@ export default function Home () {
         "tecido": "algodão"  
     },
     {
+        "id": 3,
        "nome": "Camiseta Star Wars Darth Vader Guitarra Chemical",
         "preco": 79,
         "desconto": 0.1,
@@ -32,13 +36,23 @@ export default function Home () {
         "tecido": "algodão"   
     },
     {
-       "nome": "Camiseta Star Wars Darth Vader Guitarra Chemical",
-        "preco": 79,
-        "desconto": 0.1,
-        "tamanhos": ["PP", "M", "G"],
-        "imagem": "https://www.lojabackinblack.com.br/cdn/imagens/produtos/det/camiseta-star-wars-darth-vader-guitarra-chemical.jpg",
+        "id": 4,
+       "nome": "Camiseta Nirvana In Utero Bomber Manga Longa",
+        "preco": 99,
+        "desconto": 0.25,
+        "tamanhos": ["P", "M", "G"],
+        "imagem": "https://www.lojabackinblack.com.br/cdn/imagens/produtos/det/camiseta-nirvana-in-utero-bomber-manga-longa.jpg",
         "tecido": "algodão"  
-    }
+    },
+    {
+        "id": 5,
+        "nome": "Camiseta Nirvana In Utero Bomber Manga Longa",
+         "preco": 99,
+         "desconto": 0.25,
+         "tamanhos": ["P", "M", "G"],
+         "imagem": "https://www.lojabackinblack.com.br/cdn/imagens/produtos/det/camiseta-nirvana-in-utero-bomber-manga-longa.jpg",
+         "tecido": "algodão"  
+     }
 ])
 
     return (
@@ -63,6 +77,7 @@ export default function Home () {
                 </div>
             </Carousel>
             <ListarProdutos lista={camisasRockAndRoll}/>
+            <Footer/>
         </>
     ) 
 }

@@ -37,6 +37,10 @@ a {
   border-radius: 5px;
 }
 
+.container-descricao p{
+  text-align: center;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -48,6 +52,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .imagem-produto {
@@ -55,5 +60,12 @@ main {
 }
 
 .preco {
-  font-size: 25px;
+  font-size: 20px;
+}
+
+footer {
+  display: flex;
+  background-color: #000;
+  color: white;
+  justify-content: space-around;
 }
