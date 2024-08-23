@@ -24,7 +24,7 @@ header {
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .container-produto {
@@ -35,17 +35,19 @@ a {
   border: 2px solid black;
   margin-bottom: 10px;
   border-radius: 5px;
+  justify-content: space-between;
 }
 
-.container-descricao p{
+.container-descricao p {
   text-align: center;
 }
 
-main {
+.sub-main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 2%
+  justify-content: center;
+  margin: 2%;
+  gap: 2%;
 }
 
 .container-descricao {
@@ -60,6 +62,32 @@ main {
 }
 
 .preco {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.botao-adicionar-carrinho {
+  margin: 0 0 10px 0;
+  color: white;
+  background-color: black;
+  border: 0;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.preco-desconto {
+  display: flex;
+  flex-direction: row;
+}
+
+.desconto {
+  margin-left: 10px;
+  color: red;
+  text-decoration: line-through;
+}
+
+.descricao-pagina {
+  margin: 20px 0 -10px 20px;
   font-size: 20px;
 }
 
@@ -68,4 +96,58 @@ footer {
   background-color: #000;
   color: white;
   justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+@media screen and (max-width: 1070px) {
+  .container-produto {
+    width: 30% ;
+  }
+
+  .container-descricao {
+    font-size: 15px;
+  }
+
+  .preco-desconto p{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .container-produto {
+    width: 40% ;
+  }
+  .descricao-pagina {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-produto {
+    width: 90%;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .navegacao li {
+    font-size: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .Toastify__toast {
+    margin-bottom: 8px;
+  }
 }
